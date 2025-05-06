@@ -1,0 +1,121 @@
+.neural-network-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #0b0c10;
+}
+
+/* Add these styles to your main CSS file */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #0b0c10;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Example styling for the navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(11, 12, 16, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  color: #66fcf1;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+  color: #66fcf1;
+  border-bottom: 2px solid #66fcf1;
+}
+
+/* Example styling for the hero section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.highlight {
+  color: #66fcf1;
+}
+
+.hero-image {
+  border-radius: 10px;
+  border: 2px solid #66fcf1;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #66fcf1;
+  color: #0b0c10;
+  border: 2px solid #66fcf1;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #66fcf1;
+  border: 2px solid #66fcf1;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(102, 252, 241, 0.3);
+}

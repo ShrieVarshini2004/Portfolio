@@ -1,0 +1,304 @@
+@media (prefers-color-scheme: dark) {
+:root {
+  --primary-accent: #66fcf1; /* Cyan by default */
+  --primary-accent-rgb: 102, 252, 241;
+  --text-primary: #ccd6f6;
+  --text-secondary: #a8b2d1;
+  --bg-primary: #0a192f;
+  --bg-secondary: rgba(10, 25, 47, 0.8);
+  --bg-dark: #0a192f;
+  --bg-light: rgba(10, 25, 47, 0.5);
+  --shadow-color: rgba(0, 0, 0, 0.7);
+  --image-border: rgba(102, 252, 241, 0.2);
+}
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-accent: #ff6b9d; /* Pink accent color */
+    --primary-accent-rgb: 255, 107, 157;
+    --text-primary: #333333; /* Dark text for contrast */
+    --text-secondary: #555555;
+    --bg-primary: #f6afdc; /* Light pinkish background */
+    --bg-secondary: #ecb3f5; /* Lighter purple-pink for containers */
+    --bg-dark: rgba(255, 255, 255, 0.7);
+    --bg-light: rgba(255, 255, 255, 0.5);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --image-border: rgba(255, 107, 157, 0.2);
+    --about-bg: #d6c0f8; /* Light purple background for about section */
+    --about-container-bg: rgba(224, 206, 250, 0.9); /* Semi-transparent version */
+  }
+
+}
+
+
+/* Neural Network Container */
+.neural-network-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* Full Page Layout */
+.fullpage-hero {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Text Content - Left Side */
+.text-content {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  padding-right: 60px;
+  max-width: 600px;
+  text-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.greeting {
+  color: var(--primary-accent);
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  display: block;
+  color: rgb(195, 137, 137);
+  color: var(--name-color);
+}
+
+.subtitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin: 1.5rem 0 2.5rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.highlight {
+  color: var(--primary-accent);
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+/* Buttons */
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn {
+  background-color: var(--primary-accent);
+  color: var(--bg-primary);
+  border: 1px solid var(--primary-accent);
+  box-shadow: 0 0 15px rgba(var(--primary-accent-rgb), 0.4);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(var(--primary-accent-rgb), 0.6);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: var(--primary-accent);
+  border: 1px solid var(--primary-accent);
+}
+
+.secondary-btn:hover {
+  background: rgba(var(--primary-accent-rgb), 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(var(--primary-accent-rgb), 0.3);
+}
+
+/* Image - Right Side */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 500px;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--image-border);
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 12px;
+  border: 1px solid var(--primary-accent);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* About Me Section */
+.about-section {
+  position: relative;
+  padding: 8rem 0;
+  background: transparent;
+  color: var(--about-bg);
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-content {
+  padding: 0 40px;
+}
+
+.about-container {
+  background: transparent; /* Make container transparent */
+  backdrop-filter: none; /* Remove blur effect */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px; /* Adjust padding as needed */
+  border-radius: 2; /* Remove rounded corners */
+  box-shadow: none; /* Remove shadow */
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 2rem;
+  color: var(--primary-accent);
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto 3rem; /* Center the text */
+  line-height: 1.8;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  color: var(--text-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .text-content {
+    padding-right: 0;
+    margin-bottom: 40px;
+    background: var(--bg-dark);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+  }
+  
+  .cta-buttons {
+    justify-content: center;
+  }
+  
+  .image-container {
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .image-container img {
+    max-height: 50vh;
+  }
+
+  .name {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .about-section {
+    padding: 5rem 0;
+  }
+  
+  .about-container {
+    padding: 0 20px;
+  }
+  
+  .skills-list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .text-content {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+  }
+}
+
+/* Light mode specific image adjustments */
+@media (prefers-color-scheme: light) {
+  .image-container img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  .light-mode .image-container img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  .name {
+    color: #222;
+  }
+  
+  .section-title {
+    color: #222;
+  }
+  
+}
